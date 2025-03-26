@@ -148,7 +148,7 @@ vLLM provides an HTTP server that implements OpenAI's [Completions API](https://
 2. **Run the Docker Container:**
 
    ```bash
-   docker run -p 8000:8000 quantized-llm-api
+   docker run -p 8000:8000 -e HF_TOKEN=<your_hf_token> quantized-llm-api
    ```
 To call the server, you can use the [official OpenAI Python client](https://github.com/openai/openai-python), or any other HTTP client.
 
