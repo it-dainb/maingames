@@ -1,0 +1,5 @@
+llama-index>=0.12.25
+python-dotenv>=1.0.1
+streamlit>=1.43.2
+videodb>=0.2.11
+llama-index-retrievers-videodb>=0.3.0
