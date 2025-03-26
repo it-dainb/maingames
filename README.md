@@ -87,13 +87,13 @@ streamlit run app.py
 
 # Exercise 2 - LLM deployment
 
-This solution applies advanced quantization techniques using AutoRound and GPTQModel to compress and accelerate large language models for low-bit inference. In our exercise, we compared a baseline FP16 model (bigscience/bloomz-1b1) with a quantized 4-bit version (itdainb/bloomz-1b1-w4g128-auto-gptq).
+This solution applies advanced quantization techniques using [AutoRound](https://github.com/intel/auto-round) and [GPTQModel](https://github.com/ModelCloud/GPTQModel) to compress and accelerate large language models for low-bit inference. In our exercise, we compared a baseline FP16 model (bigscience/bloomz-1b1) with a quantized 4-bit version (itdainb/bloomz-1b1-w4g128-auto-gptq).
 
 ## Techniques and Evaluation
 
 **Quantization Technique:**  
 - **AutoRound Algorithm:**  
-  Uses sign gradient descent to fine-tune the rounding and minmax values of model weights over 200 steps. This method competes with recent quantization approaches without incurring additional inference overhead.  
+  Uses sign gradient descent to fine-tune the rounding and minmax values of model weights over 1000 steps. This method competes with recent quantization approaches without incurring additional inference overhead.  
 - **GPTQModel Toolkit:**  
   Implements various quantization backends (e.g., TRITON, MARLIN, BITBLAS) to optimize inference speed on CPU/GPU. The quantized model not only supports GPTQ but is also designed to easily integrate additional methods like QQQ.
 
